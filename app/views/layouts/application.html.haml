@@ -15,8 +15,8 @@
       = render 'layouts/navigation'
     %header
       .row.spacer
-        .six.columns
-          %video
+        .six.columns.hide-for-small
+          %img{:src => "/assets/movie.png" }
         .six.columns
           %h1.subheader It all starts here
           %h1.subheader 31st January at the
@@ -30,6 +30,36 @@
 
           %a.button.radius
             Learn More
+    .partners
+      .row
+        .twelve.columns
+          %img{:src => "/assets/partners.png"}
+    .manifesto
+      .row.spacer
+      .row
+        .twelve.columns.centered
+          %h2.subheader
+            Young People of Kenya... 3 things are important
+      .row.spacer
+      .row
+        .four.columns
+          %img{:src => "/assets/manifesto-peace.png"}
+          %h3.peace
+            Peace
+          %p
+            We are the Peace Makers
+        .four.columns
+          %img{:src => "/assets/manifesto-entrepreneurship.png"}
+          %h3.entrepreneurship
+            Entrepreneurship
+          %p
+            Get the youth the tools to create jobs
+        .four.columns
+          %img{:src => "/assets/manifesto-leadership.png"}
+          %h3.leadership
+            Leadership
+          %p
+            We are the leaders of today
     #main{:role => "main"}
       = yield
     %footer

@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $darkBrown : #372f2c;
+$mediumTextColor: #5c6667;
 
 .attached, .top-bar {
   background-color: $darkBrown;
@@ -32,7 +33,7 @@ $darkBrown : #372f2c;
 }
 
 header {
-  background: #b7ddf2;
+  background: #b7ddf2 url(/assets/nairobi.png) no-repeat center bottom;
   height: 400px;
   margin: -30px auto 0 !important;
 }
@@ -42,6 +43,48 @@ header h1.subheader {
   margin-bottom: 0px;
 }
 
+header p {
+  color: $mediumTextColor;
+}
+
 .spacer {
   padding-top: 20px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.manifesto {
+  background: transparent url(/assets/partners-border.png) repeat-x center top;
+  background-color: #efefeb;
+  min-height: 300px;
+}
+
+
+.manifesto h2 {
+  color: $darkBrown;
+}
+
+.manifesto img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 227px;
+}
+
+.manifesto h3.peace {
+  color: #3c82be;
+}
+
+.manifesto h3.entrepreneurship {
+  color: #d84035;
+}
+
+.manifesto h3.leadership {
+  color: #deb012;
+}
+
+.manifesto h3, .manifesto p {
+  text-align: center;
 }
