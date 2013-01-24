@@ -1,3 +1,47 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$darkBrown : #372f2c;
+
+.attached, .top-bar {
+  background-color: $darkBrown;
+}
+
+.attached .row::before, .attached .row::after {
+  content: none;
+}
+
+.top-bar li.active {
+  background: #ffffff;
+}
+
+.top-bar h1, .top-bar .top   {
+  text-transform: uppercase;
+}
+
+.top-bar li.active > h1 > a {
+  color: $darkBrown;
+}
+
+.top-bar .attached {
+  padding: 0 15px;
+  width: 100%;
+  max-width: 100%;
+  z-index: 0 !important;
+}
+
+header {
+  background: #b7ddf2;
+  height: 400px;
+  margin: -30px auto 0 !important;
+}
+
+header h1.subheader {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.spacer {
+  padding-top: 20px;
+}
