@@ -5,9 +5,9 @@
       %title= content_for?(:title) ? yield(:title) : t(:name)
       %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
-        = stylesheet_link_tag "http://vjs.zencdn.net/c/video-js.css", :media => "all"
+        -#= stylesheet_link_tag "http://vjs.zencdn.net/c/video-js.css", :media => "all"
         = javascript_include_tag "application"
-        = javascript_include_tag "http://vjs.zencdn.net/c/video.js"
+        -#= javascript_include_tag "http://vjs.zencdn.net/c/video.js"
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
@@ -37,29 +37,46 @@
     .manifesto
       .row.spacer
       .row
-        .twelve.columns.centered
-          %h2.subheader
-            Young People of Kenya... 3 things are important
+        .nine.columns
+          .row
+            .twelve.columns
+              %h2
+                What is on the Agenda
+          .row
+            .four.columns
+              %img{:src => "/assets/manifesto-peace.png"}
+              %h3.peace
+                Peace
+              %p
+                We are the Peace Makers
+            .four.columns
+              %img{:src => "/assets/manifesto-entrepreneurship.png"}
+              %h3.entrepreneurship
+                Entrepreneurship
+              %p
+                Get the youth the tools to create jobs
+            .four.columns
+              %img{:src => "/assets/manifesto-leadership.png"}
+              %h3.leadership
+                Leadership
+              %p
+                We are the leaders of today
+        .three.columns.registration
+          %h3
+            Can't Attend the Summit
+          %p
+            No Problem, just sign up here and get all the Summit
+            content, tools and resources for free, now that's
+            Youth Power
+          %form{}
+            %input{:name => "name", :type => "text", :placeholder => "Your Name", :required => "required"}
+            %input{:name => "email", :type => "email", :placeholder => "Your Email", :required => "required"}
+            %input{:name => "phone", :type => "tel", :placeholder => "Your Mobile", :required => "required"}
+            %input.button.radius.submit{:type => "submit", :value => "Sign me up"}
       .row.spacer
       .row
-        .four.columns
-          %img{:src => "/assets/manifesto-peace.png"}
-          %h3.peace
-            Peace
-          %p
-            We are the Peace Makers
-        .four.columns
-          %img{:src => "/assets/manifesto-entrepreneurship.png"}
-          %h3.entrepreneurship
-            Entrepreneurship
-          %p
-            Get the youth the tools to create jobs
-        .four.columns
-          %img{:src => "/assets/manifesto-leadership.png"}
-          %h3.leadership
-            Leadership
-          %p
-            We are the leaders of today
+
+
     #main{:role => "main"}
       = yield
     %footer

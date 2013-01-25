@@ -85,6 +85,24 @@ header p {
   color: #deb012;
 }
 
-.manifesto h3, .manifesto p {
+.manifesto h3, .manifesto h2, .manifesto p {
   text-align: center;
+}
+
+.manifesto .registration {
+  padding-left: 20px;
+  background: transparent url(/assets/form-divider.png) repeat-y left top;
+}
+.manifesto .registration h3 {
+  text-align: left;
+}
+
+.manifesto .registration p {
+  font-size: 13px;
+}
+
+.manifesto .submit {
+  margin-left: 50px;
+  background-color: #3274b0;
+  border: none;
 }
