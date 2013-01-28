@@ -346,6 +346,25 @@ header {
   top: -14px;
 }
 
+.mobile-register {
+  background: url(/assets/sms_register.jpg) no-repeat;
+  height: 273px;
+  width: 276px;
+  margin: 20px auto;
+}
+
+.mobile-register {
+  padding: 0px 25px 0px 17px;
+
+  p {
+    text-align: right;
+    font-weight: bold;
+  }
+
+  h3 {
+    text-align: right;
+  }
+}
 
 .peace {
   .indicator {
@@ -369,6 +388,14 @@ header {
     background-position: 60px 0px;
   }
   background-color: $entrepreneurshipColor;
+  background: -moz-linear-gradient(top,  #d84035 1%, #d84035 18%, #e5e5e5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#d84035), color-stop(18%,#d84035), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #d84035 1%,#d84035 18%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #d84035 1%,#d84035 18%,#e5e5e5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #d84035 1%,#d84035 18%,#e5e5e5 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #d84035 1%,#d84035 18%,#e5e5e5 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d84035', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
 }
 
 .leadership {
@@ -377,4 +404,11 @@ header {
     background-position: 30px 0px;
   }
   background-color: $leadershipColor;
+  background: -moz-linear-gradient(top, #deb012 1%, #e5e5e5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#deb012), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #deb012 1%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #deb012 1%,#e5e5e5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #deb012 1%,#e5e5e5 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #deb012 1%,#e5e5e5 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#deb012', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 }
