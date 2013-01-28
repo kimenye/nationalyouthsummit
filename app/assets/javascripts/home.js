@@ -22,6 +22,18 @@ $(document).ready(function() {
         }
     });
 
+
+    $('.social a').hover(function() {
+        var item = $(this);
+        var id = item.attr('id');
+        $("#" + id + " .social-icon").addClass("hover");
+
+    }, function() {
+        var item = $(this);
+        var id = item.attr('id');
+        $("#" + id + " .social-icon").removeClass("hover");
+    });
+
     $('.agenda-item.peace .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
     $('.agenda-item.entrepreneurship .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
     $('.agenda-item.leadership .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
