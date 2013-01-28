@@ -1,3 +1,10 @@
 .row
   .eight.columns
-    = raw(@page.content_for(:body))
+    %article.story
+      .title
+        %h3
+          = page_title
+      .content
+        = raw(@page.content_for(:body))
+  .four.columns
+    = render 'layouts/sidebar'
