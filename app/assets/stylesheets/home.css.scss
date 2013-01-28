@@ -119,7 +119,7 @@ header {
     color: $darkBrown;
   }
 
-  h4, h2, p {
+  h4, h2 {
     text-align: center;
   }
 }
@@ -128,7 +128,7 @@ header {
   background: #ffffff url(/assets/registration-border.png) no-repeat -34px center;
   margin-top: 30px;
   border-radius: 7px;
-  padding: 10px 20px;
+  padding: 10px 30px;
 }
 .registration h3 {
   text-align: left;
