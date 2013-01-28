@@ -35,15 +35,20 @@ $mediumTextColor: #5c6667;
 .nav-bar li.active {
   background: #ffffff;
   border-color: $darkBrown;
+  border-bottom-color: #ffffff;
+  border-top-color: #ffffff;
 }
 
 .nav-bar li.active:hover {
   border-color: $darkBrown;
+  border-bottom-color: #ffffff;
+  border-top-color: #ffffff;
 }
 
 .nav-bar > li.active > a:hover {
   background: #ffffff;
   border-color: $darkBrown;
+  cursor: pointer;
 }
 
 .nav-bar a.top   {
