@@ -41,6 +41,8 @@ $(document).ready(function() {
     $('.agenda-item.entrepreneurship').addClass('hidden');
     $('.agenda-item.leadership').addClass('hidden');
 
+    $('header .slides').orbit({ fluid: '16x6', directionalNav: true, timer:false});
+
     $('#registration-form').submit(function() {
         var form = $(this);
         var valid = form.valid();

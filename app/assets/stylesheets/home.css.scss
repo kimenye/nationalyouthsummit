@@ -77,9 +77,44 @@ $quoteColor: #6f6f6f;
 }
 
 header {
-  background: #b7ddf2 url(/assets/nairobi.png) no-repeat center bottom;
+  //background: #b7ddf2 url(/assets/nairobi.png) no-repeat center bottom;
   height: 400px;
   margin-top: 40px;
+  position: relative;
+
+  .slide {
+    height: 400px;
+  }
+
+  .toboa {
+    background: url(/assets/octop.jpg) no-repeat top center;
+    .video {
+      padding-top: 20px;
+    }
+  }
+
+  .mbusi {
+    background: url(/assets/mbusi.jpg) no-repeat top center;
+  }
+
+  .mondrian {
+    background: url(/assets/mondrian.jpg) no-repeat top center;
+  }
+
+  .slides { background: url(/assets/loader.gif) center center #f4f4f4; height: 300px; }
+  .slides img { display: none; }
+
+  .slides.orbit { background: none; }
+  .slides.orbit img { display: block; }
+
+  .skyline {
+    background: url(/assets/nairobi.png) no-repeat bottom center;
+    position: absolute;
+    bottom: -3px;
+    height: 77px;
+    width: 100%;
+    z-index: 3;
+  }
 
   h1.subheader {
     margin-top: 0px;
