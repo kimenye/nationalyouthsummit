@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+      %title= content_for?(:title) ? yield(:title) : t(:name)
+      %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
+        = stylesheet_link_tag "application", :media => "all"
+        -#= stylesheet_link_tag "http://vjs.zencdn.net/c/video-js.css", :media => "all"
+        = javascript_include_tag "application"
+        -#= javascript_include_tag "http://vjs.zencdn.net/c/video.js"
+        = csrf_meta_tags
+        = yield(:head)
+  %body{:class => "#{controller_name} #{action_name}"}
+    = render 'layouts/navigation'
+    %header
+      .row.spacer
+        .six.columns.hide-for-small
+          %img{:src => "/assets/movie.png" }
+        .six.columns
+          %h1.subheader It all starts here
+          %h1.subheader 31st January at the
+          %h1.subheader KICC NAIROBI
+
+          %p
+            The National Youth Summit is where the movement
+            for the next generation of Kenyan leaders is getting
+            launched. We are coming together to say NO to the forces
+            that want to take this beautiful country to the dogs.
+
+          %a.button.radius{:href => "/main/about-the-summit"}
+            Learn More
+    .partners
+      .row
+        .twelve.columns
+          %img{:src => "/assets/partners.png"}
+    -##main{:role => "main"}
+      .row
+        .twelve.columns
+    #main{:role => "main"}
+      = yield
+    %footer
+    / ! end of #container

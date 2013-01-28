@@ -1,16 +1,20 @@
 !!!
 %html
+  -#- site_bar = render('/refinery/site_bar', :head => true)
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-      %title= content_for?(:title) ? yield(:title) : t(:name)
-      %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
-        = stylesheet_link_tag "application", :media => "all"
-        -#= stylesheet_link_tag "http://vjs.zencdn.net/c/video-js.css", :media => "all"
-        = javascript_include_tag "application"
-        -#= javascript_include_tag "http://vjs.zencdn.net/c/video.js"
-        = csrf_meta_tags
-        = yield(:head)
-  %body{:class => "#{controller_name} #{action_name}"}
+    %title= browser_title(yield(:title))
+    = raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present?
+    = raw %(<meta name="keywords" content="#{@meta.meta_keywords}">) if @meta.meta_keywords.present?
+    = raw %(<link rel="canonical" content="#{@canonical}" />) if @canonical.present?
+    = csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend
+    = yield :meta
+    = javascript_include_tag "application"
+    = stylesheet_link_tag "application", :media => "all"
+    -#= yield :stylesheets
+    = render '/refinery/google_analytics'
+  %body
+    -#= site_bar
     = render 'layouts/navigation'
     %header
       .row.spacer
@@ -27,58 +31,28 @@
             launched. We are coming together to say NO to the forces
             that want to take this beautiful country to the dogs.
 
-          %a.button.radius
+          -#%a.button.radius
             Learn More
-    .partners
-      .row
-        .twelve.columns
-          %img{:src => "/assets/partners.png"}
-    -#.manifesto
-      .row.spacer
-      .row
-        .nine.columns
-          .row
-            .twelve.columns
-              %h2
-                What is on the Agenda
-          .row
-            .four.columns
-              %img{:src => "/assets/manifesto-peace.png"}
-              %h3.peace
-                Peace
-              %p
-                We are the Peace Makers
-            .four.columns
-              %img{:src => "/assets/manifesto-entrepreneurship.png"}
-              %h3.entrepreneurship
-                Entrepreneurship
-              %p
-                Get the youth the tools to create jobs
-            .four.columns
-              %img{:src => "/assets/manifesto-leadership.png"}
-              %h3.leadership
-                Leadership
-              %p
-                We are the leaders of today
-        .three.columns.registration
-          %h3
-            Can't Attend the Summit
-          %p
-            No Problem, just sign up here and get all the Summit
-            content, tools and resources for free, now that's
-            Youth Power
-          %form#registration-form{}
-            %input{:name => "name", :type => "text", :placeholder => "Your Name", :required => "required"}
-            %input{:name => "email", :type => "email", :placeholder => "Your Email", :required => "required"}
-            %input{:name => "phone", :type => "tel", :placeholder => "Your Mobile", :required => "required"}
-            %input.button.radius.submit{:type => "submit", :value => "Sign me up"}
-      .row.spacer
-      .row
-
-
-    #main{:role => "main"}
-      .row
-        .twelve.columns
-          = yield
-    %footer
-    / ! end of #container
+    %section#page
+      = yield
+-#<!DOCTYPE html>
+-#<%= render '/refinery/html_tag' %>
+-#<% site_bar = render('/refinery/site_bar', :head => true) -%>
+-#<%= render '/refinery/head' %>
+-#<body id='<%= canonical_id @page %>'>
+-#<%= site_bar -%>
+-#<%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+-#<div id="page_container">
+-#  <header id="header">
+-#    <%= render '/refinery/header' -%>
+-#  </header>
+-#  <section id="page">
+-#    <%= yield %>
+-#  </section>
+-#  <footer>
+-#    <%= render '/refinery/footer' -%>
+-#  </footer>
+-#</div>
+-#<%= render '/refinery/javascripts' %>
+-#</body>
+-#</html>

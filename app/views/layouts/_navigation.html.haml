@@ -1,17 +1,17 @@
 .container
   .fixed.contain-to-grid
     %ul.nav-bar
-      %li.name.active
-        %a.top{:href => root_path}
+      %li.name{:class => defined?(@page)? "" : "active" }
+        %a.top{:href => "/"}
           Home
-      %li.has-flyout
+      %li.has-flyout{:class => defined?(@page) && @page.slug =="about-the-summit" ? "active" : "" }
         %a.top{:href => "#"} The Summit
         %a.flyout-toggle{:href => "#"}
           %span
         %ul.flyout
           %li
-            %a{:href => "#"} What is it about?
-          %li
+            %a{:href => "/main/about-the-summit"} What is it about?
+          -#%li
             %a{:href => "#"} Who is attending?
           %li
             %a{:href => "#"} Partners
