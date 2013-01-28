@@ -4,6 +4,11 @@
 
 $darkBrown : #372f2c;
 $mediumTextColor: #5c6667;
+$peaceColor: #3c82be;
+$entrepreneurshipColor: #d84035;
+$leadershipColor: #deb012;
+$lightGray: #efefeb;
+$quoteColor: #6f6f6f;
 
 .contain-to-grid {
   background: $darkBrown;
@@ -105,38 +110,18 @@ header {
   text-align: center;
 }
 
-.manifesto, .body-bg {
+.body-bg {
   background: transparent url(/assets/partners-border.png) repeat-x center top;
   background-color: #efefeb;
   min-height: 300px;
-}
 
+  h2{
+    color: $darkBrown;
+  }
 
-.manifesto h2, .body-bg {
-  color: $darkBrown;
-}
-
-.manifesto img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 183px;
-}
-
-.manifesto h4.peace {
-  color: #3c82be;
-}
-
-.manifesto h4.entrepreneurship {
-  color: #d84035;
-}
-
-.manifesto h4.leadership {
-  color: #deb012;
-}
-
-.manifesto h4, .manifesto h2, .manifesto p, .registration h4 {
-  text-align: center;
+  h4, h2, p {
+    text-align: center;
+  }
 }
 
 .registration {
@@ -159,7 +144,6 @@ header {
 }
 
 .submit {
-  //margin-left: 50px;
   background-color: #3274b0;
   border: none;
 }
@@ -209,4 +193,141 @@ header {
     border-bottom: 1px solid $mediumTextColor;
     margin-bottom: 10px;
   }
+}
+
+.agenda {
+  img, h4 {
+    cursor: pointer;
+    background: transparent;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 183px;
+  }
+
+  h4.peace {
+    color: $peaceColor;
+  }
+
+  h4.entrepreneurship {
+    color: $entrepreneurshipColor;
+  }
+
+  h4.leadership {
+    color: $leadershipColor;
+  }
+}
+
+.manifesto {
+
+  .agenda-item {
+    min-height: 200px;
+    border-radius: 0px 0px 5px 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+
+    img.main {
+      padding: 20px 20px;
+    }
+
+    div.orbit-wrapper div.slider-nav span {
+      margin-top: 20%;
+    }
+
+    blockquote {
+      margin: 29px 21px 0px 0px;
+      padding: 0;
+      font-size: 130%;
+      line-height: 160%;
+      font-style: normal;
+      border-left: none;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .bqstart {
+      float: left;
+      height: 45px;
+      margin-top: -36px;
+      margin-left: -49px;
+      padding-top: 45px;
+      margin-bottom: -50px;
+      font-size: 500%;
+      color: $quoteColor;
+    }
+
+    .bqend {
+      float: right;
+      height: 25px;
+      margin-top: 0px;
+      padding-top: 45px;
+      font-size: 500%;
+      color: $quoteColor;
+    }
+  }
+
+  h5 {
+    color: #ffffff;
+    margin-top: 24px;
+  }
+
+  .quotes {
+    background-color: #ffffff;
+    min-height: 200px;
+    border-radius: 5px 5px 0px 0px;
+
+    .row.quote {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+.indicator {
+  background: url(/assets/pointers.png);
+  width: 29px;
+  height: 14px;
+  position: absolute;
+  top: -14px;
+}
+
+
+.peace {
+  .indicator {
+    left: 100px;
+  }
+
+  background-color: $peaceColor;
+  background: #3c82be; /* Old browsers */
+  background: -moz-linear-gradient(top, #3c82be 13%, #dce1e5 79%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(13%,#3c82be), color-stop(79%,#dce1e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3c82be 13%,#dce1e5 79%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3c82be 13%,#dce1e5 79%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3c82be 13%,#dce1e5 79%); /* IE10+ */
+  background: linear-gradient(to bottom, #3c82be 13%,#dce1e5 79%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c82be', endColorstr='#dce1e5',GradientType=0 ); /* IE6-9 */
+}
+
+.entrepreneurship {
+  .indicator {
+    left: 320px;
+    background-position: 60px 0px;
+  }
+  background-color: $entrepreneurshipColor;
+}
+
+.leadership {
+  .indicator {
+    left: 530px;
+    background-position: 30px 0px;
+  }
+  background-color: $leadershipColor;
 }

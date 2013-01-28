@@ -9,6 +9,26 @@ $(document).ready(function() {
         }}
     );
 
+    var current = "peace";
+
+    $('.agenda img, .agenda h4').click(function() {
+        var item = $(this);
+        var toDisplay = item.data('toggle');
+
+        if (toDisplay != current) {
+            $('.agenda-item.' + current).addClass('hidden');
+            $('.agenda-item.' + toDisplay).removeClass('hidden');
+            current = toDisplay;
+        }
+    });
+
+    $('.agenda-item.peace .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
+    $('.agenda-item.entrepreneurship .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
+    $('.agenda-item.leadership .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
+
+    $('.agenda-item.entrepreneurship').addClass('hidden');
+    $('.agenda-item.leadership').addClass('hidden');
+
     $('#registration-form').submit(function() {
         var form = $(this);
         var valid = form.valid();
