@@ -1,0 +1,17 @@
+.registration
+  %h4.cta
+    Can't Attend the Summit?
+  %p.cta-description
+    No Problem, just sign up here and get all the Summit
+    content, tools and resources for free, now that's
+    Youth Power
+  %form#registration-form{}
+    %input{:name => "participant[name]", :type => "text", :placeholder => "Your Name", :required => "required"}
+    %input{:name => "participant[email]", :type => "email", :placeholder => "Your Email", :required => "required"}
+    %input#tel{:name => "participant[phone_number]", :type => "tel", :placeholder => "Your Mobile", :required => "required"}
+    .row
+      .three.columns.progress-indicator
+      .four.columns
+        %input.button.radius.submit{:type => "submit", :value => "Sign me up"}
+      .three.columns
+

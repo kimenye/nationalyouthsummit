@@ -117,39 +117,46 @@ header p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 227px;
+  height: 183px;
 }
 
-.manifesto h3.peace {
+.manifesto h4.peace {
   color: #3c82be;
 }
 
-.manifesto h3.entrepreneurship {
+.manifesto h4.entrepreneurship {
   color: #d84035;
 }
 
-.manifesto h3.leadership {
+.manifesto h4.leadership {
   color: #deb012;
 }
 
-.manifesto h3, .manifesto h2, .manifesto p {
+.manifesto h4, .manifesto h2, .manifesto p, .registration h4 {
   text-align: center;
 }
 
-.manifesto .registration {
-  padding-left: 20px;
-  background: transparent url(/assets/form-divider.png) repeat-y left top;
+.registration {
+  background: #ffffff url(/assets/registration-border.png) no-repeat -34px center;
+  margin-top: 30px;
+  border-radius: 7px;
+  padding: 10px 20px;
 }
-.manifesto .registration h3 {
+.registration h3 {
   text-align: left;
 }
 
-.manifesto .registration p {
+.registration .loader {
+  background: #ffffff url(/assets/loader.gif) no-repeat right center;
+  height: 35px;
+}
+
+.registration p {
   font-size: 13px;
 }
 
-.manifesto .submit {
-  margin-left: 50px;
+.submit {
+  //margin-left: 50px;
   background-color: #3274b0;
   border: none;
 }

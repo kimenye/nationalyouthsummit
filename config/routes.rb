@@ -1,4 +1,7 @@
 Nys::Application.routes.draw do
+  resources :participants
+
+
   root :to => "home#index", :as => :home_page
 
   # This line mounts Refinery's routes at the root of your application.

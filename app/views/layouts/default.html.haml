@@ -33,10 +33,11 @@
       .row
         .twelve.columns
           %img{:src => "/assets/partners.png"}
-    -##main{:role => "main"}
+    #main.manifesto{:role => "main"}
       .row
-        .twelve.columns
-    #main{:role => "main"}
-      = yield
+        .eight.columns
+          = yield
+        .four.columns
+          = render 'layouts/sidebar'
     %footer
     / ! end of #container
