@@ -5,37 +5,79 @@
 $darkBrown : #372f2c;
 $mediumTextColor: #5c6667;
 
-.attached, .top-bar {
-  background-color: $darkBrown;
+.contain-to-grid .nav-bar {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.attached .row::before, .attached .row::after {
-  content: none;
+.container .nav-bar {
+  margin: 0px auto;
+  background: $darkBrown;
 }
 
-.top-bar li.active {
+.contain-to-grid {
+  background: $darkBrown;
+}
+
+.container.nav-bar {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.container {
+  width: 100%;
+}
+
+.nav-bar li {
+  border-color: transparent;
+}
+
+.nav-bar li.active {
   background: #ffffff;
+  border-color: $darkBrown;
 }
 
-.top-bar h1, .top-bar .top   {
+.nav-bar li.active:hover {
+  border-color: $darkBrown;
+}
+
+.nav-bar > li.active > a:hover {
+  background: #ffffff;
+  border-color: $darkBrown;
+}
+
+.nav-bar a.top   {
   text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.top-bar li.active > h1 > a {
+
+.nav-bar li.active > a {
   color: $darkBrown;
 }
 
-.top-bar .attached {
-  padding: 0 15px;
-  width: 100%;
-  max-width: 100%;
-  z-index: 0 !important;
+.submenu h1 {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.container .flyout.large {
+  width: 700px;
+}
+
+.top-bar ul > li.has-dropdown .dropdown li label {
+  text-decoration: underline;
+}
+
+.has-dropdown > a.top:hover {
+  background: white;
 }
 
 header {
   background: #b7ddf2 url(/assets/nairobi.png) no-repeat center bottom;
   height: 400px;
-  margin: -30px auto 0 !important;
+  margin-top: 40px;
 }
 
 header h1.subheader {

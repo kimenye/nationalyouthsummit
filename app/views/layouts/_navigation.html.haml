@@ -1,28 +1,28 @@
-.attached
-  .row
-    %nav.top-bar
-      %ul
-        %li.name.active
-          %h1
-            %a{:href => root_path}
-              Home
-        %li.toggle-topbar
-          %a{:href => "#"}
-      %section
-        %ul.left
-          %li.divider
-          %li.top.has-flyout
-            %a{:href => "#"}
-              The Summit
-            %a.flyout-toggle{:href => "#"}
-              %span
-                &nbsp;
-          %li.top
-            %a{:href => "#"}
-              Power Tools
-          %li.top
-            %a{:href => "#"}
-              Blog
-          %li.top
-            %a{:href => "#"}
-              Photos & Videos
+.container
+  .fixed.contain-to-grid
+    %ul.nav-bar
+      %li.name.active
+        %a.top{:href => root_path}
+          Home
+      %li.has-flyout
+        %a.top{:href => "#"} The Summit
+        %a.flyout-toggle{:href => "#"}
+          %span
+        %ul.flyout
+          %li
+            %a{:href => "#"} What is it about?
+          %li
+            %a{:href => "#"} Who is attending?
+          %li
+            %a{:href => "#"} Partners
+          %li
+            %a{:href => "#"} Sponsors
+      %li
+        %a.top{:href => "#"}
+          Power Tools
+      %li.top
+        %a.top{:href => "#"}
+          Blog
+      %li
+        %a.top{:href => "#"}
+          Photos & Videos
