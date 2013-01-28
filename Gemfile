@@ -5,7 +5,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'jquery-rails', '2.1.4'
+gem 'jquery-rails', '~> 2.0.0'
 gem "thin", ">= 1.5.0"
 gem "pg", ">= 0.14.1"
 gem "haml", ">= 3.1.7"
@@ -22,4 +22,6 @@ gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.3"
 gem "better_errors", ">= 0.3.2", :group => :development
 gem "binding_of_caller", ">= 0.6.8", :group => :development
-gem 'devise'
+gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms-blog', '~> 2.0.0'
+gem 'fog'

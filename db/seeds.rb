@@ -7,3 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # Environment variables (ENV['...']) are set in the file config/application.yml.
 # See http://railsapps.github.com/rails-environment-variables.html
+
+# Added by Refinery CMS Pages extension
+Refinery::Pages::Engine.load_seed
+
+# Added by Refinery CMS Blog engine
+Refinery::Blog::Engine.load_seed

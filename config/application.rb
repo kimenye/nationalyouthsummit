@@ -60,5 +60,13 @@ module Nys
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    Refinery::Core.configure do |config|
+      config.s3_backend = true
+      config.s3_access_key_id = ENV['S3_KEY']
+      config.s3_secret_access_key = ENV['S3_SECRET']
+      config.s3_bucket_name = ENV['S3_BUCKET']
+      #config.s3_region = 'fill_in_your_buckets_region_here' # this one's not always required, default is 'us-east-1'
+    end
   end
 end

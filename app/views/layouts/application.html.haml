@@ -34,7 +34,7 @@
       .row
         .twelve.columns
           %img{:src => "/assets/partners.png"}
-    .manifesto
+    -#.manifesto
       .row.spacer
       .row
         .nine.columns
@@ -78,6 +78,8 @@
 
 
     #main{:role => "main"}
-      = yield
+      .row
+        .twelve.columns
+          = yield
     %footer
     / ! end of #container
