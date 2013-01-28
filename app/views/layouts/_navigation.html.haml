@@ -4,19 +4,17 @@
       %li.name{:class => defined?(@page)? "" : "active" }
         %a.top{:href => "/"}
           Home
-      %li.has-flyout{:class => defined?(@page) && @page.slug =="about-the-summit" ? "active" : "" }
+      %li.has-flyout{:class => defined?(@page) && (@path == "sponsors" || @page.slug =="about-the-summit") ? "active" : "" }
         %a.top{:href => "#"} The Summit
         %a.flyout-toggle{:href => "#"}
           %span
         %ul.flyout
           %li
             %a{:href => "/main/about-the-summit"} What is it about?
-          -#%li
-            %a{:href => "#"} Who is attending?
           %li
             %a{:href => "#"} Partners
           %li
-            %a{:href => "#"} Sponsors
+            %a{:href => "/sponsors"} Sponsors
       %li
         %a.top{:href => "#"}
           Power Tools
