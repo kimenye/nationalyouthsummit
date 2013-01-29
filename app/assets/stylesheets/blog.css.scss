@@ -103,8 +103,16 @@ footer {
       }
     }
 
-    .social {
+    .social, .num-comments {
       margin-top: 15px;
+    }
+
+    .num-comments {
+      text-align: right;
+
+      a {
+        color: $obamaBlue;
+      }
     }
   }
 
