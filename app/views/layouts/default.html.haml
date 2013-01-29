@@ -10,7 +10,7 @@
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
     = render 'layouts/navigation'
-    %header
+    %header.hide-for-small
       = render 'layouts/hero_slider'
       .skyline
     .partners
@@ -20,8 +20,7 @@
     #main.body-bg{:role => "main"}
       .row
         .eight.columns
-          .hide-for-small
-            = yield
+          = yield
         .four.columns
           = render 'layouts/sidebar'
     %footer

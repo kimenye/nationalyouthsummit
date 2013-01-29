@@ -1,39 +1,40 @@
-.row.spacer
-.row
-  .twelve.columns
-    %h2
-      What is on the Agenda
-.row.agenda
-  .four.columns
-    %img{:src => "/assets/manifesto-peace.png", "data-toggle" => "peace"}
-    %h4.peace{"data-toggle" => "peace"}
-      Peace
-  .four.columns
-    %img{:src => "/assets/manifesto-entrepreneurship.png", "data-toggle" => "entrepreneurship"}
-    %h4.entrepreneurship{"data-toggle" => "entrepreneurship"}
-      Entrepreneurship
-  .four.columns
-    %img{:src => "/assets/manifesto-leadership.png", "data-toggle" => "leadership"}
-    %h4.leadership{"data-toggle" => "leadership"}
-      Leadership
-.row.spacer
+.hide-for-small
+  .row.spacer
+  .row
+    .twelve.columns
+      %h2
+        What is on the Agenda
+  .row.agenda
+    .four.columns
+      %img{:src => "/assets/manifesto-peace.png", "data-toggle" => "peace"}
+      %h4.peace{"data-toggle" => "peace"}
+        Peace
+    .four.columns
+      %img{:src => "/assets/manifesto-entrepreneurship.png", "data-toggle" => "entrepreneurship"}
+      %h4.entrepreneurship{"data-toggle" => "entrepreneurship"}
+        Entrepreneurship
+    .four.columns
+      %img{:src => "/assets/manifesto-leadership.png", "data-toggle" => "leadership"}
+      %h4.leadership{"data-toggle" => "leadership"}
+        Leadership
+  .row.spacer
 
-.manifesto
-  .row.agenda-item.peace
-    .indicator
-    %h5
-      We are the Peace Makers
-    .quotes
-      = render "/layouts/quotes"
-  .row.agenda-item.entrepreneurship
-    .indicator
-    %h5
-      Get the youth the tools to create jobs
-    .quotes
-      = render "/layouts/quotes"
-  .row.agenda-item.leadership
-    .indicator
-    %h5
-      We are the leaders of today
-    .quotes
-      = render "/layouts/quotes"
+  .manifesto
+    .row.agenda-item.peace
+      .indicator
+      %h5
+        We are the Peace Makers
+      .quotes
+        = render "/layouts/quotes"
+    .row.agenda-item.entrepreneurship
+      .indicator
+      %h5
+        Get the youth the tools to create jobs
+      .quotes
+        = render "/layouts/quotes"
+    .row.agenda-item.leadership
+      .indicator
+      %h5
+        We are the leaders of today
+      .quotes
+        = render "/layouts/quotes"
