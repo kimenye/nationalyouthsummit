@@ -51,7 +51,7 @@
       %li
         %a.top{:href => "#"}
           Power Tools
-      %li.top{:class => defined?(@page) && (@page.slug == "blog") ? "active" : ""}
+      %li.top{:class => defined?(@page) && (!@page.nil? && @page.slug == "blog") ? "active" : ""}
         %a.top{:href => "/main/blog"}
           Blog
       %li
