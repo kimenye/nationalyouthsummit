@@ -15,14 +15,16 @@
             - if (categories = post.categories).any?
               %aside.filed_in
                 - categories.each do |category|
-                  = link_to category.title, refinery.blog_category_path(category), :class => "main"
-                  = link_to "", refinery.blog_category_path(category), :class => "tag"
+                  .category
+                    = link_to category.title, refinery.blog_category_path(category), :class => "main"
+                    = link_to "", refinery.blog_category_path(category), :class => "tag"
           .five.columns.num-comments
             = link_to "Comments", "#{refinery.blog_post_path(post)}#disqus_thread"
-            -#<a href="http://foo.com/bar.html#disqus_thread">Link</a>
-            -#%a{:href=}
     %hr.divider
     %section.clearfix
+      - if post.images.any?
+        %a.gallery-link.th{:href => refinery.blog_post_path(post)}
+          %img{:src => post.images.first.url}
       - if blog_post_teaser_enabled?
         = blog_post_teaser(post)
       - else
