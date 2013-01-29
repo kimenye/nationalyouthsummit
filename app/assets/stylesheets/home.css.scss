@@ -182,13 +182,9 @@ header {
   background-color: #efefeb;
   min-height: 300px;
 
-  h2{
-    color: $darkBrown;
-  }
-
-  h4, h2 {
-    text-align: center;
-  }
+  //h2{
+  //  color: $darkBrown;
+  //}
 }
 
 .registration {
@@ -196,6 +192,11 @@ header {
   margin-top: 30px;
   border-radius: 7px;
   padding: 10px 30px;
+
+  h2, h4 {
+    text-align: center;
+    color: $darkBrown;
+  }
 }
 .registration h3 {
   text-align: left;
