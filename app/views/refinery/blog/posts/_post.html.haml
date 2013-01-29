@@ -21,4 +21,20 @@
             = link_to "", refinery.blog_category_path(category), :class => "tag"
       %hr.divider
     = @post.body.html_safe
+
+    %hr.divider
+    %section.comments
+      #disqus_thread
+        :javascript
+          var disqus_shortname = 'nationalyouthsummit'; // required: replace example with your forum shortname
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        %a.dsq-brlink{:href => "http://disqus.com"}
+          comments powered by
+          %span.logo-disqus
+            Disqus
+
 = render :partial => '/refinery/draft_page_message' unless @post.nil? or @post.live?
