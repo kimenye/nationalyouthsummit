@@ -16,8 +16,8 @@ $(document).ready(function() {
         var toDisplay = item.data('toggle');
 
         if (toDisplay != current) {
-            $('.agenda-item.' + current).addClass('hidden');
-            $('.agenda-item.' + toDisplay).removeClass('hidden');
+            $('.agenda-item.' + current + ',.about .' + current).addClass('hidden');
+            $('.agenda-item.' + toDisplay + ',.about .' + toDisplay).removeClass('hidden');
             current = toDisplay;
         }
     });
