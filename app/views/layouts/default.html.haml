@@ -5,23 +5,13 @@
       %title= content_for?(:title) ? yield(:title) : t(:name)
       %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
-        -#= stylesheet_link_tag "http://vjs.zencdn.net/c/video-js.css", :media => "all"
         = javascript_include_tag "application"
-        -#= javascript_include_tag "http://vjs.zencdn.net/c/video.js"
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
     = render 'layouts/navigation'
     %header
-      .slides
-        .slide.toboa
-          .row
-            .six.columns
-              .video
-                %iframe{:src => "http://www.youtube.com/embed/U_oS8rjnyrY", :width=>"460", :height=>"315", :frameborder=>"0"}
-              -#<iframe width="560" height="315" src="http://www.youtube.com/embed/U_oS8rjnyrY" frameborder="0" allowfullscreen></iframe>
-        .slide.mbusi
-        .slide.mondrian
+      = render 'layouts/hero_slider'
       .skyline
     .partners
       .row

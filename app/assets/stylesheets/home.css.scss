@@ -77,7 +77,6 @@ $quoteColor: #6f6f6f;
 }
 
 header {
-  //background: #b7ddf2 url(/assets/nairobi.png) no-repeat center bottom;
   height: 400px;
   margin-top: 40px;
   position: relative;
@@ -90,6 +89,12 @@ header {
     background: url(/assets/octop.jpg) no-repeat top center;
     .video {
       padding-top: 20px;
+    }
+
+    h2 {
+      margin-top: 275px;
+      margin-left: 63%;
+      color:white;
     }
   }
 
@@ -317,7 +322,7 @@ header {
     }
 
     div.orbit-wrapper div.slider-nav span {
-      margin-top: 20%;
+      //margin-top: 29%;
     }
 
     blockquote {
@@ -349,6 +354,10 @@ header {
       padding-top: 45px;
       font-size: 500%;
       color: $quoteColor;
+    }
+
+    .bio {
+
     }
   }
 

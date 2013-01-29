@@ -34,9 +34,9 @@ $(document).ready(function() {
         $("#" + id + " .social-icon").removeClass("hover");
     });
 
-    $('.agenda-item.peace .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
-    $('.agenda-item.entrepreneurship .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
-    $('.agenda-item.leadership .quotes').orbit({ fluid: '16x6', directionalNav: true, timer:false});
+    $('.agenda-item.peace .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:false, bullets:true});
+    $('.agenda-item.entrepreneurship .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:false, bullets:true});
+    $('.agenda-item.leadership .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:false, bullets:true});
 
     $('.agenda-item.entrepreneurship').addClass('hidden');
     $('.agenda-item.leadership').addClass('hidden');
