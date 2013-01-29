@@ -1,6 +1,10 @@
 @media only screen and (max-width: 767px) {
+  .registration {
+    background: #ffffff;
+  }
+
   header {
-    margin: 0px auto !important;
-    height: 480px;
+    background: url(/assets/mondrian.jpg) no-repeat top center;
+    margin-top: 0px;
   }
 }

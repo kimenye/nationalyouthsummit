@@ -10,7 +10,7 @@
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
     = render 'layouts/navigation'
-    %header.hide-for-small
+    %header
       = render 'layouts/hero_slider'
       .skyline
     .partners
