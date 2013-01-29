@@ -1,4 +1,10 @@
 .slides.hide-for-small
+  .slide.nairobi
+    -if !(defined?(@page) && !@page.nil? && @page.slug =="about-the-summit")
+      .row
+        .twelve.columns.centered
+          %a.learn-more{:href => "/main/about-the-summit"}
+            Learn More
   .slide.toboa
     .row
       .six.columns
