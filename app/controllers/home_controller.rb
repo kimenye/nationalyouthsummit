@@ -5,7 +5,14 @@ class HomeController < ApplicationController
   end
 
   def sponsors
+    @title = "National Youth Summit : Sponsors of the Summit"
     @page = nil
-    @path = "sponsors"
+    @path = "summit"
+  end
+
+  def partners
+    @title = "National Youth Summit : Partners of the Summit"
+    @page = nil
+    @path = "summit"
   end
 end

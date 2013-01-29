@@ -1,10 +1,43 @@
-.container
+.show-for-small
+  .row
+    .twelve.columns
+      %nav.top-bar
+        %ul
+          %li.name{:class => defined?(@page)? "" : "active" }
+            %h1
+              %a.top{:href => "/"}
+                Home
+          %li.toggle-topbar
+            %a{:href => "#"}
+        %section
+          %ul.left
+            %li.divider
+            %li.has-dropdown
+              %a.active
+                The Summit
+              %ul.dropdown
+                %li
+                  %a{:href => "/main/about-the-summit"} What is it about?
+                %li
+                  %a{:href => "/partners"} Partners
+                %li
+                  %a{:href => "/sponsors"} Sponsors
+            %li
+              %a.top{:href => "#"}
+                Power Tools
+            %li.top
+              %a.top{:href => "#"}
+                Blog
+            %li
+              %a.top{:href => "#"}
+                Photos & Videos
+.container.hide-for-small
   .fixed.contain-to-grid
     %ul.nav-bar
       %li.name{:class => defined?(@page)? "" : "active" }
         %a.top{:href => "/"}
           Home
-      %li.has-flyout{:class => defined?(@page) && (@path == "sponsors" || @page.slug =="about-the-summit") ? "active" : "" }
+      %li.has-flyout{:class => defined?(@page) && (@path == "summit" || @page.slug =="about-the-summit") ? "active" : "" }
         %a.top{:href => "#"} The Summit
         %a.flyout-toggle{:href => "#"}
           %span
@@ -12,7 +45,7 @@
           %li
             %a{:href => "/main/about-the-summit"} What is it about?
           %li
-            %a{:href => "#"} Partners
+            %a{:href => "/partners"} Partners
           %li
             %a{:href => "/sponsors"} Sponsors
       %li

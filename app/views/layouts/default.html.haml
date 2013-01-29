@@ -20,7 +20,8 @@
     #main.body-bg{:role => "main"}
       .row
         .eight.columns
-          = yield
+          .hide-for-small
+            = yield
         .four.columns
           = render 'layouts/sidebar'
     %footer

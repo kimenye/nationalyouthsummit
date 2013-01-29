@@ -5,6 +5,7 @@ Nys::Application.routes.draw do
   root :to => "home#index", :as => :home_page
 
   get "sponsors" => "home#sponsors", :as => "sponsors"
+  get "partners" => "home#partners", :as => "partners"
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.

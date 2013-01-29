@@ -36,6 +36,11 @@ $quoteColor: #6f6f6f;
     margin-bottom: 0;
     border-bottom: none;
 
+    ul.flyout li a, .nav-bar li ul li a {
+      background: #ffffff;
+      font-weight: bold;
+    }
+
     li.active {
       background: #ffffff;
       border-color: $darkBrown;
@@ -329,6 +334,10 @@ header {
     padding-left: 20px;
     padding-right: 20px;
     position: relative;
+
+    .timer {
+      display: none;
+    }
 
     img.main {
       padding: 20px 20px;
