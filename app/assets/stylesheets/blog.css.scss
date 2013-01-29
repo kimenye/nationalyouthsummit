@@ -10,12 +10,23 @@
 
     img {
       display: block;
-      //margin: auto;
     }
 
     a.learn-more {
       padding-left: 30px;
     }
+  }
+
+  .blog_post, #blog_post {
+    header {
+      height: auto;
+      margin-top: 0px;
+      position: inherit;
+    }
+  }
+
+  #body_content_title {
+    display: none;
   }
 }
 

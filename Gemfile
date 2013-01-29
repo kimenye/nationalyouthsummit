@@ -27,3 +27,4 @@ gem 'refinerycms-blog', '~> 2.0.0'
 gem 'fog'
 gem 'pry'
 gem 'pry-nav'
+gem "erb2haml", :group => :development

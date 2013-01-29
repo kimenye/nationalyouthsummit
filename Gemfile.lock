@@ -73,6 +73,10 @@ GEM
       warden (~> 1.1.1)
     dragonfly (0.9.12)
       rack
+    erb2haml (0.1.2)
+      haml
+      hpricot
+      ruby_parser
     erubis (2.7.0)
     eventmachine (1.0.0)
     excon (0.16.10)
@@ -288,6 +292,7 @@ DEPENDENCIES
   capybara (>= 2.0.2)
   coffee-rails (~> 3.2.1)
   compass-rails (>= 1.0.3)
+  erb2haml
   factory_girl_rails (>= 4.1.0)
   figaro (>= 0.5.3)
   fog
