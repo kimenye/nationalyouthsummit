@@ -1,4 +1,4 @@
-%aside#comments
+-#%aside#comments
   %h2= t('title', :scope => 'refinery.blog.posts.show.comments')
   - if (comments = @post.comments.approved).any?
     = render :partial => "comment", :collection => comments
