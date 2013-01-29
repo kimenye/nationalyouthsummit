@@ -29,13 +29,16 @@
       %hr.divider
     - if @post.images.any?
       .gallery
-        - @post.images.each do |image|
-          %img{:src => image.url}
+        - @post.images.each_with_index do |image, i|
+          %img{:src => image.url, "data-caption" => "#caption#{i}" }
+
+      .captions
+        - @post.images.each_with_index do |image, i|
+          %span.orbit-caption{:id => "caption#{i}"}
+            =raw @page.caption_for_image_index(i)
       :javascript
         $(window).load(function() {
-          console.log("Loaded gallery");
-          $(".gallery").orbit({animation: 'fade',animationSpeed: 800,timer: false });
-
+          $(".gallery").orbit({animation: 'fade',animationSpeed: 800,timer: false, captions: true });
         });
     = @post.body.html_safe
 
