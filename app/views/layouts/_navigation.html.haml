@@ -26,7 +26,7 @@
               %a.top{:href => "#"}
                 Power Tools
             %li.top
-              %a.top{:href => "#"}
+              %a.top{:href => "/main/blog"}
                 Blog
             %li
               %a.top{:href => "#"}
@@ -51,8 +51,8 @@
       %li
         %a.top{:href => "#"}
           Power Tools
-      %li.top
-        %a.top{:href => "#"}
+      %li.top{:class => defined?(@page) && (@page.slug == "blog") ? "active" : ""}
+        %a.top{:href => "/main/blog"}
           Blog
       %li
         %a.top{:href => "#"}

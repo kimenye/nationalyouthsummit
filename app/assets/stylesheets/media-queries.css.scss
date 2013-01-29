@@ -3,8 +3,31 @@
     background: #ffffff;
   }
 
-  header {
+  header.large {
     background: url(/assets/mondrian.jpg) no-repeat top center;
     margin-top: 0px;
+  }
+
+  header.slim {
+    margin: 0px;
+  }
+
+  .blog {
+
+    .partners {
+      height: 220px;
+
+      img {
+        margin: auto;
+      }
+
+      .columns {
+        padding-bottom: 15px;
+      }
+
+      .learn-more {
+        margin-top: 0;
+      }
+    }
   }
 }

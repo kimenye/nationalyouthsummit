@@ -85,6 +85,18 @@ $quoteColor: #6f6f6f;
   background: white;
 }
 
+a.learn-more {
+  display: block;
+  background: url(/assets/learnmore.png) no-repeat;
+  width: 143px;
+  height: 38px;
+  color: #ffffff;
+  font-weight: bold;
+  padding-top: 10px;
+  margin: auto;
+  margin-top: 25%;
+}
+
 header {
   height: 400px;
   margin-top: 40px;
@@ -154,18 +166,6 @@ header {
 
   p {
     color: $mediumTextColor;
-  }
-
-  a.learn-more {
-    display: block;
-    background: url(/assets/learnmore.png) no-repeat;
-    width: 143px;
-    height: 38px;
-    color: #ffffff;
-    font-weight: bold;
-    padding-top: 10px;
-    margin: auto;
-    margin-top: 25%;
   }
 }
 

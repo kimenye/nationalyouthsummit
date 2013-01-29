@@ -8,15 +8,18 @@
         = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
-  %body{:class => "#{controller_name} #{action_name}"}
+  %body.blog{:class => "#{controller_name} #{action_name}"}
     = render 'layouts/navigation'
-    %header.large
-      = render 'layouts/hero_slider'
+    %header.slim
       .skyline
-    .partners
-      .row
-        .twelve.columns
-          %img{:src => "/assets/partners.jpg"}
+    .partners.row
+      .four.columns
+        %img.logo{:src => "/assets/logo_youthsummit.jpg"}
+      .six.columns
+        %img.logo{:src => "/assets/summit_banner.jpg"}
+      .two.columns
+        %a.learn-more{:href => "/main/about-the-summit"}
+          Learn More
     #main.body-bg{:role => "main"}
       .row
         .eight.columns
