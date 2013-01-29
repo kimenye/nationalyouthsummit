@@ -1,0 +1,31 @@
+- if post.live?
+  %article.story.blog_post{:id => dom_id(post)}
+    %header
+      .title
+        %h4.subheader
+          = link_to post.title, refinery.blog_post_path(post)
+      %section.details
+        = "By"
+        %span.author<
+          = post.author.username if post.author.present?
+        %time.posted_at{:datetime => post.published_at.to_date, :format => :default}
+          = t('created_at', :scope => 'refinery.blog.shared.posts', :when => post.published_at.to_s(:published))
+        - if (categories = post.categories).any?
+          %aside.filed_in
+            - categories.each do |category|
+              = link_to category.title, refinery.blog_category_path(category), :class => "main"
+              = link_to "", refinery.blog_category_path(category), :class => "tag"
+    %hr.divider
+    %section.clearfix
+      - if blog_post_teaser_enabled?
+        = blog_post_teaser(post)
+      - else
+        = post.body.html_safe
+    %footer
+      = link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post), :class => "learn-more" if blog_post_teaser_enabled?
+      -#%aside.comment_count
+        - if Refinery::Blog::Post.comments_allowed?
+          - if post.comments.any?
+            (#{pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments'))})
+          - else
+            (#{t('none', :scope => 'refinery.blog.shared.comments')})

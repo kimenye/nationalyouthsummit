@@ -1,0 +1,7 @@
+- content_for :body_content_right do
+  = yield(:body_content_right_prepend)
+  / <haml:loud> render :partial =&amp;gt; &amp;quot;/refinery/blog/shared/rss_feed&amp;quot; </haml:loud>
+  / <haml:loud> render :partial =&amp;gt; &amp;quot;/refinery/blog/shared/categories&amp;quot; </haml:loud>
+  / <haml:loud> render :partial =&amp;gt; &amp;quot;/refinery/blog/shared/tags&amp;quot; </haml:loud>
+  = blog_archive_widget
+  = yield(:body_content_right_append)

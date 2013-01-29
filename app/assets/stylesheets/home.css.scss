@@ -290,22 +290,6 @@ header {
   background: $darkBrown;
 }
 
-.story {
-  margin-top: 30px;
-  background: #ffffff;
-  border-radius: 7px;
-  padding: 10px 20px;
-
-  h3 {
-    color: $darkBrown;
-  }
-
-  .title {
-    border-bottom: 1px solid $mediumTextColor;
-    margin-bottom: 10px;
-  }
-}
-
 .agenda {
   img, h4 {
     cursor: pointer;
