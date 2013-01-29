@@ -85,6 +85,19 @@ header {
     height: 400px;
   }
 
+
+  div.orbit-wrapper div.slider-nav span.left {
+    background: url(/assets/nav-left.png) no-repeat;
+    background-size: 70%;
+    left: 10%;
+  }
+
+  div.orbit-wrapper div.slider-nav span.right {
+    background: url(/assets/nav-right.png) no-repeat;
+    background-size: 70%;
+    right: 10%;
+  }
+
   .toboa {
     background: url(/assets/octop.jpg) no-repeat top center;
     .video {
