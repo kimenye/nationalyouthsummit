@@ -29,3 +29,4 @@ gem 'pry', :group => :development
 gem 'pry-nav', :group => :development
 gem "erb2haml", :group => :development
 gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-videojs'
