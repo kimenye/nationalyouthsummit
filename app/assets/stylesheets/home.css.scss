@@ -119,6 +119,20 @@ header {
     right: 10%;
   }
 
+  .promo {
+    margin-top: 26px;
+  }
+
+  .promo-video {
+    background: url(/assets/black_banner.jpg) no-repeat top center;
+
+    .youthepower-video {
+      margin: 50px auto;
+    }
+  }
+
+
+
   .nairobi {
     background: url(/assets/nairobi.jpg) no-repeat top center;
   }
@@ -127,6 +141,7 @@ header {
     background: url(/assets/octop.jpg) no-repeat top center;
     .video {
       padding-top: 20px;
+      margin: auto;
     }
 
     h2 {
