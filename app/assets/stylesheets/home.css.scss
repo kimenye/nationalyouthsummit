@@ -293,6 +293,10 @@ header {
   background: $darkBrown;
 }
 
+.timer {
+  display: none;
+}
+
 .agenda {
   img, h4 {
     cursor: pointer;
@@ -384,10 +388,6 @@ header {
 
     ul.orbit-bullets li.active {
       background-position: -8px 0;
-    }
-
-    .timer {
-      display: none;
     }
 
     img.main {

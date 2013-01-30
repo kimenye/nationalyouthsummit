@@ -38,7 +38,7 @@
             =raw @page.caption_for_image_index(i)
       :javascript
         $(window).load(function() {
-          $(".gallery").orbit({animation: 'fade',animationSpeed: 800,timer: false, captions: true });
+          $(".gallery").orbit({animation: 'fade',animationSpeed: 800,timer:true, bullets:true, advanceSpeed: 10000, directionalNav: false });
         });
     = @post.body.html_safe
 
