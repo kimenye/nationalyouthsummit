@@ -1,8 +1,8 @@
 ---
 88logo.jpg: 88logo-3e832233bd136c366d284d8230f867b8.jpg
 88logo/index.jpg: 88logo-3e832233bd136c366d284d8230f867b8.jpg
-black_banner.jpg: black_banner-226c7b1c14fb1b65cb666f2cd14e6711.jpg
-black_banner/index.jpg: black_banner-226c7b1c14fb1b65cb666f2cd14e6711.jpg
+black_banner.jpg: black_banner-cfa96e1cccdf0b7778f2e33b82470fbe.jpg
+black_banner/index.jpg: black_banner-cfa96e1cccdf0b7778f2e33b82470fbe.jpg
 bullets.png: bullets-cf7b0a5b0ec389571715f3a3a68da415.png
 bullets/index.png: bullets-cf7b0a5b0ec389571715f3a3a68da415.png
 charles.jpg: charles-3e3f9336ee7db52962148b39509ed6fa.jpg
@@ -89,12 +89,14 @@ wangari.jpg: wangari-c8a881b8aa1b89e8d6c5654191c78136.jpg
 wangari/index.jpg: wangari-c8a881b8aa1b89e8d6c5654191c78136.jpg
 youth.jpg: youth-db2d276d509bf53e113fedce1313ab6f.jpg
 youth/index.jpg: youth-db2d276d509bf53e113fedce1313ab6f.jpg
+youthepower.jpg: youthepower-3664518471438ec701232150c3ceb56c.jpg
+youthepower/index.jpg: youthepower-3664518471438ec701232150c3ceb56c.jpg
 application.js: application-22461d2d48e42272495a696e980ef559.js
 application/index.js: application-22461d2d48e42272495a696e980ef559.js
-application.css: application-7f98599edb4f2536219505ea1a72f64a.css
-application/index.css: application-7f98599edb4f2536219505ea1a72f64a.css
-home.css: home-2b8ea1ad88ab7fb2d75680ddefd0f8c1.css
-home/index.css: home-2b8ea1ad88ab7fb2d75680ddefd0f8c1.css
+application.css: application-505e6103f06559ccf5b5e5ee43771cbb.css
+application/index.css: application-505e6103f06559ccf5b5e5ee43771cbb.css
+home.css: home-bddad6c7626ab2838678f67e1f64751e.css
+home/index.css: home-bddad6c7626ab2838678f67e1f64751e.css
 refinery/admin/add_video_icon.png: refinery/admin/add_video_icon-d16de026c5b3278008f52d0039c302c3.png
 refinery/admin/add_video_icon/index.png: refinery/admin/add_video_icon-d16de026c5b3278008f52d0039c302c3.png
 refinery/admin/wymeditor_monkeypatch.js: refinery/admin/wymeditor_monkeypatch-8c41d48fccc6670b00a1e9aab3efeef2.js
