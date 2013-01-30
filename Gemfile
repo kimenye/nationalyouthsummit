@@ -25,6 +25,7 @@ gem "binding_of_caller", ">= 0.6.8", :group => :development
 gem 'refinerycms', '~> 2.0.0'
 gem 'refinerycms-blog', '~> 2.0.0'
 gem 'fog'
-gem 'pry'
-gem 'pry-nav'
+gem 'pry', :group => :development
+gem 'pry-nav', :group => :development
 gem "erb2haml", :group => :development
+gem 'refinerycms-page-images', '~> 2.0.0'

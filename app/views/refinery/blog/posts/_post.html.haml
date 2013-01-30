@@ -19,18 +19,27 @@
           .ten.columns
             %aside.filed_in
               - categories.each do |category|
-                = link_to category.title, refinery.blog_category_path(category), :class => "main"
-                = link_to "", refinery.blog_category_path(category), :class => "tag"
+                .category
+                  = link_to category.title, refinery.blog_category_path(category), :class => "main"
+                  = link_to "", refinery.blog_category_path(category), :class => "tag"
           .two.columns.social
             %a.twitter-share-button{:href => "https://twitter.com/share", "data-hashtags" => "YouThePower"}
               Tweet
             .fb-send{"data-href" => "http://google.com"}
-            -#<div class="fb-send" data-href="http://example.com"></div>
-            -#<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="YouThePower">Tweet</a>
-            -#<script></script>
-            -#Links
-            -#YouThePower
       %hr.divider
+    - if @post.images.any?
+      .gallery
+        - @post.images.each_with_index do |image, i|
+          %img{:src => image.url, "data-caption" => "#caption#{i}" }
+
+      .captions
+        - @post.images.each_with_index do |image, i|
+          %span.orbit-caption{:id => "caption#{i}"}
+            =raw @page.caption_for_image_index(i)
+      :javascript
+        $(window).load(function() {
+          $(".gallery").orbit({animation: 'fade',animationSpeed: 800,timer: false, captions: true });
+        });
     = @post.body.html_safe
 
     %hr.divider

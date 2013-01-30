@@ -76,7 +76,6 @@ footer {
     }
 
     .author {
-      //text-decoration: underline;
       border-bottom: 1px dashed $obamaBlue;
     }
 
@@ -84,7 +83,7 @@ footer {
       margin-top: 15px;
 
       .main {
-        display: inline-block;
+        float: left;
         height: 21px;
         padding: 4px 5px 5px 5px;
         background: $tagBlue;
@@ -97,9 +96,8 @@ footer {
         background: url(/assets/tag.png) no-repeat;
         height: 21px;
         width: 12px;
-        margin-left: -5px;
-        display: inline-block;
-        margin-right: 5px;
+        margin-left: -1px;
+        float: right;
       }
     }
 
@@ -125,9 +123,32 @@ footer {
   }
 }
 
-.story {
+.gallery-link, .gallery {
+  img {
+    display: block;
+    margin: auto;
+  }
+}
 
+.category {
+  float: left;
+  margin-right: 10px;
+}
+
+.gallery { background: url(/assets/gallery-loader.gif) no-repeat center center #ffffff; height: 128px; }
+.gallery img { display: none; }
+
+.gallery.orbit { background: none; }
+.gallery.orbit img { display: block; }
+
+.story {
   margin-bottom: 20px;
+
+  .gallery {
+    .orbit img {
+      //margin: auto;
+    }
+  }
 
   h1, h2, h3 {
     line-height: 1.3;
