@@ -7,6 +7,8 @@ bullets.png: bullets-cf7b0a5b0ec389571715f3a3a68da415.png
 bullets/index.png: bullets-cf7b0a5b0ec389571715f3a3a68da415.png
 charles.jpg: charles-3e3f9336ee7db52962148b39509ed6fa.jpg
 charles/index.jpg: charles-3e3f9336ee7db52962148b39509ed6fa.jpg
+cisco_logo.jpg: cisco_logo-9132c95fd214ae8a70ccf8bbeff894db.jpg
+cisco_logo/index.jpg: cisco_logo-9132c95fd214ae8a70ccf8bbeff894db.jpg
 desmond.jpg: desmond-4aef2dffa1c230ebe3a74a185b54d363.jpg
 desmond/index.jpg: desmond-4aef2dffa1c230ebe3a74a185b54d363.jpg
 download.png: download-c1eb03423abb9dbdffa342791033ff80.png
@@ -19,6 +21,10 @@ hivisasa_logo.png: hivisasa_logo-e6119b9bccf425b21534750d84fcf5b8.png
 hivisasa_logo/index.png: hivisasa_logo-e6119b9bccf425b21534750d84fcf5b8.png
 jimmy.jpg: jimmy-d87f6931ac143768ede880058743e7ee.jpg
 jimmy/index.jpg: jimmy-d87f6931ac143768ede880058743e7ee.jpg
+jtl_logo.jpg: jtl_logo-4e0ac1bd2b4537d2040b81789fd79254.jpg
+jtl_logo/index.jpg: jtl_logo-4e0ac1bd2b4537d2040b81789fd79254.jpg
+kura_kwa_amani.jpg: kura_kwa_amani-a353a155a8b5fb57f39607b3e60b8509.jpg
+kura_kwa_amani/index.jpg: kura_kwa_amani-a353a155a8b5fb57f39607b3e60b8509.jpg
 learnmore.png: learnmore-5d07d42e9ab8f967558920efda434328.png
 learnmore/index.png: learnmore-5d07d42e9ab8f967558920efda434328.png
 loader.gif: loader-dad92326d0ee8c359433d9d08295222a.gif
@@ -27,8 +33,8 @@ logo_brand_kenya.jpg: logo_brand_kenya-093d5bd44dae64106e503868a93bd5aa.jpg
 logo_brand_kenya/index.jpg: logo_brand_kenya-093d5bd44dae64106e503868a93bd5aa.jpg
 logo_cewarn.jpg: logo_cewarn-58a0c1d4c45036163c3b856ed8c1af3c.jpg
 logo_cewarn/index.jpg: logo_cewarn-58a0c1d4c45036163c3b856ed8c1af3c.jpg
-logo_global_peace_festival.jpg: logo_global_peace_festival-7169018b706f5e6de40a85e68f0314a0.jpg
-logo_global_peace_festival/index.jpg: logo_global_peace_festival-7169018b706f5e6de40a85e68f0314a0.jpg
+logo_global_peace_festival.jpg: logo_global_peace_festival-3031a2778308f99645f95296e7bb2aea.jpg
+logo_global_peace_festival/index.jpg: logo_global_peace_festival-3031a2778308f99645f95296e7bb2aea.jpg
 logo_iebc.jpg: logo_iebc-5f5c4c7558fa4e526ee472a09c09adad.jpg
 logo_iebc/index.jpg: logo_iebc-5f5c4c7558fa4e526ee472a09c09adad.jpg
 logo_national_youth_sector_alliance.jpg: logo_national_youth_sector_alliance-c955558267fcb2b321b9222fa5081bb3.jpg
@@ -69,6 +75,8 @@ partners.jpg: partners-5a2681d9d31a0c9215a4ddd19d7015b1.jpg
 partners/index.jpg: partners-5a2681d9d31a0c9215a4ddd19d7015b1.jpg
 pointers.png: pointers-cee084abebd16c6b922b9571eacabb82.png
 pointers/index.png: pointers-cee084abebd16c6b922b9571eacabb82.png
+powernoodle.jpg: powernoodle-c546dbbc88f8285e9cf7ec5c44d11c39.jpg
+powernoodle/index.jpg: powernoodle-c546dbbc88f8285e9cf7ec5c44d11c39.jpg
 registration-border.png: registration-border-4f4ff0786674eb7946d42819d3e269da.png
 registration-border/index.png: registration-border-4f4ff0786674eb7946d42819d3e269da.png
 sms_register.jpg: sms_register-e5979c7cea02a3bfce47f793556fd8ce.jpg
@@ -81,6 +89,8 @@ tag.png: tag-8517cc66a4fa8683cdd4ef5f964ec696.png
 tag/index.png: tag-8517cc66a4fa8683cdd4ef5f964ec696.png
 trevor.jpg: trevor-6748d1026fa851f7dca48c7901ab2f54.jpg
 trevor/index.jpg: trevor-6748d1026fa851f7dca48c7901ab2f54.jpg
+un_habitat.jpg: un_habitat-75a1721355cd212dea021cbb2b8139a9.jpg
+un_habitat/index.jpg: un_habitat-75a1721355cd212dea021cbb2b8139a9.jpg
 ushahidi.png: ushahidi-779d0b5d512dbebae0c6b4b9bca452d9.png
 ushahidi/index.png: ushahidi-779d0b5d512dbebae0c6b4b9bca452d9.png
 video-js.png: video-js-a15b945a7d77c3f74f8291089ae0e93a.png

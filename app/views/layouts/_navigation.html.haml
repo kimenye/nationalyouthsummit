@@ -28,7 +28,7 @@
             %li.top
               %a.top{:href => "/main/blog"}
                 Blog
-            %li
+            -#%li
               %a.top{:href => "#"}
                 Photos & Videos
 .container.hide-for-small
@@ -54,6 +54,6 @@
       %li.top{:class => defined?(@page) && (!@page.nil? && @page.slug == "blog") ? "active" : ""}
         %a.top{:href => "/main/blog"}
           Blog
-      %li
+      -#%li
         %a.top{:href => "#"}
           Photos & Videos
