@@ -13,12 +13,89 @@
 
 ActiveRecord::Schema.define(:version => 20130128111743) do
 
+  create_table "admins", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "name",                                   :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
+  add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
+
+  create_table "benefits", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "gender"
+    t.boolean  "extra"
+    t.integer  "minimum_age"
+    t.integer  "maximum_age"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.boolean  "priority"
+  end
+
+  create_table "enquiries", :force => true do |t|
+    t.string   "gender"
+    t.integer  "priority"
+    t.string   "name"
+    t.date     "dob"
+    t.string   "location"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "current_provider"
+  end
+
+  create_table "hospitals", :force => true do |t|
+    t.string   "name"
+    t.string   "physical_address"
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "tel"
+    t.boolean  "inpatient"
+    t.boolean  "outpatient"
+    t.string   "working_hours"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "participants", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.string   "phone_number"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "product_benefits", :id => false, :force => true do |t|
+    t.integer "benefit_id"
+    t.integer "product_id"
+    t.float   "benefit_limit"
+  end
+
+  add_index "product_benefits", ["benefit_id", "product_id"], :name => "index_product_benefits_on_benefit_id_and_product_id"
+  add_index "product_benefits", ["product_id", "benefit_id"], :name => "index_product_benefits_on_product_id_and_benefit_id"
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "rating"
+    t.float    "price"
+    t.float    "limit"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "feature_1"
+    t.string   "feature_2"
+    t.string   "feature_3"
   end
 
   create_table "refinery_blog_categories", :force => true do |t|
@@ -222,6 +299,16 @@ ActiveRecord::Schema.define(:version => 20130128111743) do
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
 
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -238,29 +325,5 @@ ActiveRecord::Schema.define(:version => 20130128111743) do
   create_table "tags", :force => true do |t|
     t.string "name"
   end
-
-  create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "name",                   :default => "", :null => false
-    t.string   "phone_number",           :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-  end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end
