@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "notifications@example.com"
+  default :from => ENV["FROM_EMAIL"]
 
   def send_csv(csv_string)
 

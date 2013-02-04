@@ -35,6 +35,4 @@ Nys::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  #Set email address to send csv file to
-  ENV['TO_EMAIL'] = "email@email.com";
 end
