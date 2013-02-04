@@ -1,6 +1,33 @@
 @media only screen and (max-width: 767px) {
-  header {
-    margin: 0px auto !important;
-    height: 480px;
+  .registration {
+    background: #ffffff;
+  }
+
+  header.large {
+    background: url(/assets/youth.jpg) no-repeat top center;
+    margin-top: 0px;
+  }
+
+  header.slim {
+    margin: 0px;
+  }
+
+  .blog {
+
+    .partners {
+      height: 220px;
+
+      img {
+        margin: auto;
+      }
+
+      .columns {
+        padding-bottom: 15px;
+      }
+
+      .learn-more {
+        margin-top: 0;
+      }
+    }
   }
 }

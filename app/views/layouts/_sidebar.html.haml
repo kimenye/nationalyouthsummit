@@ -2,9 +2,9 @@
   %h4.cta
     Can't Attend the Summit?
   %p.cta-description
-    No Problem, just sign up here and get all the Summit
-    content, tools and resources for free, now that's
-    Youth Power
+    No problem, just sign up here and get all the Summit
+    content, tools and resources for free. Now that's
+    Youth Power!
   %form#registration-form{}
     %input{:name => "participant[name]", :type => "text", :placeholder => "Your Name", :required => "required"}
     %input{:name => "participant[email]", :type => "email", :placeholder => "Your Email", :required => "required"}
@@ -15,16 +15,14 @@
         %input.button.radius.submit{:type => "submit", :value => "Sign me up"}
       .three.columns
 .mobile-register
-  .row
+  -#.row
     .offset-by-five
       %h3
         SMS 8848
-  .row
+  -#.row
     .offset-by-five
-      %p.right-aligned
-        Lorem ipsum dolor, this is the format in which to send your SMS messages.
-      %p.right-aligned
-        Here is why you should...
+      %p
+        Register now to be a part of the National Youth Summit and the YouThePower Movement! Send your name, county and constituency, followed by 'YouThePower' to 8848.
 %ul.tabs.vertical.social
   %li
     %a#facebook{:href=>"http://www.facebook.com/pages/National-Youth-Summit-Kenya/422812971106320?fref=ts", :target =>"_blank"}
@@ -35,14 +33,16 @@
       .social-icon.twitter
       TWITTER
   %li
-    %a#google-plus{:href=>"#"}
+    %a#google-plus{:href=>"https://plus.google.com/u/0/106583277513547257784", :target => "_blank"}
       .social-icon.google-plus
       GOOGLE +
   %li
-    %a#live-stream{:href=>"#"}
+    %a#live-stream{:href=>"http://youtube.com/user/youthepowerkenya", :target => "_blank"}
       .social-icon.live-stream
-      LIVESTREAM
+      YOUTUBE
   %li
-    %a#blog-link{:href=>"#"}
+    %a#blog-link{:href=>"/main/blog"}
       .social-icon.blog
       BLOG
+.download
+  %a.download-program{:href => "http://bit.ly/WQjlAH", :target => "_blank"}

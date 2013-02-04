@@ -16,8 +16,9 @@
   %body
     -#= site_bar
     = render 'layouts/navigation'
-    %header
+    %header.large
       = render 'layouts/hero_slider'
       .skyline
     %section#page.body-bg
       = yield
+    = render '/layouts/ga'

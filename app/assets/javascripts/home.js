@@ -16,8 +16,8 @@ $(document).ready(function() {
         var toDisplay = item.data('toggle');
 
         if (toDisplay != current) {
-            $('.agenda-item.' + current).addClass('hidden');
-            $('.agenda-item.' + toDisplay).removeClass('hidden');
+            $('.agenda-item.' + current + ',.about .' + current).addClass('hidden');
+            $('.agenda-item.' + toDisplay + ',.about .' + toDisplay).removeClass('hidden');
             current = toDisplay;
         }
     });
@@ -34,9 +34,9 @@ $(document).ready(function() {
         $("#" + id + " .social-icon").removeClass("hover");
     });
 
-    $('.agenda-item.peace .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:false, bullets:true});
-    $('.agenda-item.entrepreneurship .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:false, bullets:true});
-    $('.agenda-item.leadership .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:false, bullets:true});
+    $('.agenda-item.peace .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:true, bullets:true, advanceSpeed: 10000});
+    $('.agenda-item.entrepreneurship .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:true, bullets:true, advanceSpeed: 10000});
+    $('.agenda-item.leadership .quotes').orbit({ fluid: '16x6', directionalNav: false, timer:true, bullets:true, advanceSpeed: 10000});
 
     $('.agenda-item.entrepreneurship').addClass('hidden');
     $('.agenda-item.leadership').addClass('hidden');

@@ -1,4 +1,16 @@
-.slides
+.slides.hide-for-small
+  .slide.promo-video
+    .row.promo
+      .offset-by-three.six.columns.centered
+        .video
+          %video#youthepower-video.video-js.vjs-default-skin{:controls => "", :preload => "none", :width => "520", :height => "325", "data-setup" => '{"techOrder":["youtube","html5"],"ytcontrols":false}'}
+            %source{:src => "http://www.youtube.com/watch?v=lKB7uhL4B3Q", :type => "video/youtube" }
+  .slide.nairobi
+    -if !(defined?(@page) && !@page.nil? && @page.slug =="about-the-summit")
+      .row
+        .twelve.columns.centered
+          %a.learn-more{:href => "/main/about-the-summit"}
+            Learn More
   .slide.toboa
     .row
       .six.columns
@@ -9,4 +21,7 @@
         %h2
           Octopizzo
   .slide.mbusi
+  .slide.you-the-power
   .slide.mondrian
+.show-for-small
+  -#.slide.mondrian

@@ -2,6 +2,7 @@
 %html
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => content_for?(:title), :name => "og:title"}
       %title= content_for?(:title) ? yield(:title) : t(:name)
       %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
@@ -10,13 +11,13 @@
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
     = render 'layouts/navigation'
-    %header
+    %header.large
       = render 'layouts/hero_slider'
       .skyline
     .partners
       .row
         .twelve.columns
-          %img{:src => "/assets/partners.png"}
+          %img{:src => "/assets/partners.jpg"}
     #main.body-bg{:role => "main"}
       .row
         .eight.columns
@@ -25,3 +26,4 @@
           = render 'layouts/sidebar'
     %footer
     / ! end of #container
+    = render '/layouts/ga'
