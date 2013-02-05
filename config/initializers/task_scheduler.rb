@@ -9,7 +9,7 @@ scheduler = Rufus::Scheduler.start_new
 
 # every day of the week at 23:55:00
 scheduler.cron '0 55 23 * * 1-5' do
-  export_to_csv
+  #export_to_csv
 end
 
 def export_to_csv

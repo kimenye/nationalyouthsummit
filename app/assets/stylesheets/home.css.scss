@@ -200,11 +200,15 @@ header {
   min-height: 300px;
 }
 
-.registration {
-  background: #ffffff url(/assets/registration-border.png) no-repeat -34px center;
+.registration, .warning-message {
+  background: #ffffff;
   margin-top: 30px;
   border-radius: 7px;
   padding: 10px 30px;
+}
+
+.registration {
+  background: #ffffff url(/assets/registration-border.png) no-repeat -34px center;
 
   h2, h4 {
     text-align: center;
