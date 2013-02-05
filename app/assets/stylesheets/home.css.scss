@@ -207,6 +207,14 @@ header {
   padding: 10px 30px;
 }
 
+.warning-message {
+  h4 {
+    text-align: center;
+    text-decoration: underline;
+    color: #ff0000;
+  }
+}
+
 .registration {
   background: #ffffff url(/assets/registration-border.png) no-repeat -34px center;
 
