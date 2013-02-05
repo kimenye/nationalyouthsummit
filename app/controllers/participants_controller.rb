@@ -41,16 +41,24 @@ class ParticipantsController < ApplicationController
   # POST /participants.json
   def create
     @participant = Participant.new(params[:participant])
+    existing_email = Participant.where("email = ?", params[:participant][:email])
 
-    respond_to do |format|
-      if @participant.save
-        format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
-        format.json { render json: @participant, status: :created, location: @participant }
-      else
-        format.html { render action: "new" }
+    if(existing_email.size > 0)
+      respond_to do |format|
         format.json { render json: @participant.errors, status: :unprocessable_entity }
       end
+    else
+
+      respond_to do |format|
+        if @participant.save
+          format.json { render json: @participant, status: :created, location: @participant }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @participant.errors, status: :unprocessable_entity }
+        end
+      end
     end
+
   end
 
   # PUT /participants/1

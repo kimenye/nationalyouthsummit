@@ -54,14 +54,22 @@ $(document).ready(function() {
 
         if (valid) {
             $('.progress-indicator').toggleClass('loader');
-            $.post('/participants', form.serialize(), function(response) {
-                $('.progress-indicator').toggleClass('loader');
-                if (response.id != null && response.id != "") {
+
+            $.ajax({
+                type: "POST",
+                url: '/participants',
+                data: form.serialize()
+            }).done(function() {
+                    $('.progress-indicator').toggleClass('loader');
                     $('#registration-form').hide();
                     $('h4.cta').html("Thank you for registering.");
                     $('p.cta-description').html("SMS your #name, #county and #constituency to 8848 to unlock your Amani points");
-                }
-            }, 'json');
+                })
+              .fail(function() {
+                    $("#repeated_email").css("color","red");
+                    $("#repeated_email").css("display","block");
+                });
+
             return false;
         }
 
