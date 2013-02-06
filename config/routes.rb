@@ -2,7 +2,8 @@ Nys::Application.routes.draw do
   resources :participants
 
 
-  root :to => "home#index", :as => :home_page
+  #root :to => "home#index", :as => :home_page
+  root :to => "refinery/pages#home"
 
   get "sponsors" => "home#sponsors", :as => "sponsors"
   get "partners" => "home#partners", :as => "partners"
