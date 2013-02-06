@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
   layout "default"
 
   def index
@@ -15,4 +16,5 @@ class HomeController < ApplicationController
     @page = nil
     @path = "summit"
   end
+
 end
