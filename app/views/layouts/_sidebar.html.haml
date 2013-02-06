@@ -7,6 +7,8 @@
   %form#registration-form{}
     %input{:name => "participant[name]", :type => "text", :placeholder => "Your Name", :required => "required"}
     %input{:name => "participant[email]", :type => "email", :placeholder => "Your Email", :required => "required"}
+    %label#repeated_email{:class => 'error', :for => "participant[email-error]", :style => 'display: none;'}
+      This email address is already registered
     %input#tel{:name => "participant[phone_number]", :type => "tel", :placeholder => "Your Mobile", :required => "required"}
     .row
       .three.columns.progress-indicator
@@ -19,14 +21,7 @@
   %p
     Our 8848 short code did not send a message to invite anyone to a summit on 4th to 6th February 2013. We would like to warn the public that this message does not originate from National Youth Summit and that registration to the short code has been suspended until further notice. We are carrying out investigations to find the originator of the fictitious text for judicial action. Any inconveniences caused by the texts making rounds now is highly regretted as it is not the creation of the NYS digital platform team.
 .mobile-register
-  -#.row
-    .offset-by-five
-      %h3
-        SMS 8848
-  -#.row
-    .offset-by-five
-      %p
-        Register now to be a part of the National Youth Summit and the YouThePower Movement! Send your name, county and constituency, followed by 'YouThePower' to 8848.
+
 %ul.tabs.vertical.social
   %li
     %a#facebook{:href=>"http://www.facebook.com/pages/National-Youth-Summit-Kenya/422812971106320?fref=ts", :target =>"_blank"}
